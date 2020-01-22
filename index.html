@@ -260,7 +260,7 @@ _RMSE(y::AbstractMatrix, ŷ::AbstractMatrix) =
   sqrt.(sum((y .- ŷ).^2, dims=[1]) / size(y, 1))
 ```
 ---
-## Generalize for any dataset
+## Abstraction for any dataset type
 ```julia
 function RMSE(dataset, model, statvals::AbstractNDSparse)
   _μ = statvals["total", "μ"][:value]
@@ -287,7 +287,7 @@ function RMSE(dataset, model, statvals::AbstractNDSparse)
 end
 ```
 ---
-## Generalize for any metric
+## Abstraction for any single metric
 ```julia
 function evaluation(dataset, model, statvals::AbstractNDSparse, metric)
   eval(quote
@@ -318,7 +318,7 @@ function evaluation(dataset, model, statvals::AbstractNDSparse, metric)
 end
 ```
 ---
-## Evaluate over mulitple metric
+## Evaluate over mulitple metrics
 ```julia
 function evaluations(dataset, model, statvals::AbstractNDSparse, metrics::Union{Array{Symbol}, Array{Function}})
   metric_vals = map(metrics) do metric
