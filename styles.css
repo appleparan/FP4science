@@ -1,11 +1,19 @@
-@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
-@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
-@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Slabo+27px&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap);
 
-body { font-family: 'Droid Serif'; }
-h1, h2, h3 {
-  font-family: 'Yanone Kaffeesatz';
-  font-weight: normal;
+body { 
+  font-family: 'Slabo 27px';
+  font-size: 1.1em;
 }
-.remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+h1, h2, h3 {
+  font-family: 'Roboto Slab';
+  font-weight: bold;
+}
+
+.remark-code, .remark-inline-code {
+  font-family: 'Roboto Mono';
+  font-size: 0.8em;
+}
 
